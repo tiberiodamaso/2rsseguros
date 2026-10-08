@@ -49,7 +49,7 @@
   --shadow: 0 1px 2px rgba(22, 37, 74, .06), 0 8px 24px rgba(22, 37, 74, .08);
   --gutter: 16px;
   --max: 1120px;
-  --bar-h: 76px;               /* altura da barra fixa de WhatsApp no mobile */
+  --bar-h: 92px;               /* altura da barra fixa de WhatsApp no mobile */
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -110,6 +110,7 @@ a:hover { color: var(--magenta-text); }
   font-size: .8125rem; text-align: center; padding: 6px var(--gutter); line-height: 1.4;
 }
 .proto-bar strong { font-weight: 600; }
+.proto-bar .more { display: none; }
 
 /* ---------- Cabeçalho ---------- */
 
@@ -143,10 +144,10 @@ a:hover { color: var(--magenta-text); }
 .btn-ghost:hover { background: var(--navy-50); color: var(--navy-900); }
 
 .wa-status {
-  display: flex; align-items: center; gap: 8px; margin: 10px 0 0;
-  font-size: .875rem; color: var(--ink-soft);
+  display: flex; align-items: flex-start; gap: 8px; margin: 10px 0 0;
+  font-size: .875rem; line-height: 1.4; color: var(--ink-soft);
 }
-.wa-status .dot { width: 10px; height: 10px; border-radius: 50%; background: #9aa5bd; flex: none; }
+.wa-status .dot { width: 10px; height: 10px; margin-top: .3em; border-radius: 50%; background: #9aa5bd; flex: none; }
 .wa-status[data-open="true"] .dot { background: var(--wa); box-shadow: 0 0 0 4px var(--wa-tint); }
 
 /* ---------- Hero ---------- */
@@ -237,11 +238,11 @@ a:hover { color: var(--magenta-text); }
 
 /* Passos */
 .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; counter-reset: step; }
-.steps li {
+.steps > li {
   counter-increment: step; background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
   padding: 24px 24px 24px 76px; position: relative;
 }
-.steps li::before {
+.steps > li::before {
   content: counter(step); position: absolute; left: 24px; top: 22px;
   width: 36px; height: 36px; border-radius: 50%; background: var(--navy-900); color: #fff;
   display: grid; place-items: center; font-weight: 800;
@@ -249,6 +250,7 @@ a:hover { color: var(--magenta-text); }
 .steps h3 { margin-bottom: .25em; }
 .steps p { color: var(--ink-soft); margin: 0; }
 .steps ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink-soft); }
+.steps ul li { margin-top: 2px; }
 
 /* Operadoras */
 .ops-group + .ops-group { margin-top: 32px; }
@@ -303,7 +305,7 @@ a:hover { color: var(--magenta-text); }
 .final-cta h2 { color: #fff; }
 .final-cta p { color: #c7d2ea; max-width: 34em; margin-left: auto; margin-right: auto; }
 .final-cta .btn { width: 100%; max-width: 420px; }
-.final-cta .wa-status { justify-content: center; color: #c7d2ea; }
+.final-cta .wa-status { justify-content: center; color: #c7d2ea; max-width: 420px; margin: 12px auto 0; }
 .final-cta .wa-status[data-open="true"] .dot { box-shadow: 0 0 0 4px rgba(255, 255, 255, .15); background: #5fd38d; }
 
 /* ---------- Rodapé ---------- */
@@ -319,8 +321,9 @@ a:hover { color: var(--magenta-text); }
 .footer-brand p { margin-top: 12px; max-width: 28em; }
 .footer-legal {
   border-top: 1px solid rgba(199, 210, 234, .2); margin-top: 32px; padding-top: 20px;
-  display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: .8125rem; color: #9fb0d6;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; font-size: .8125rem; color: #9fb0d6;
 }
+.footer-legal > * { min-height: 44px; display: inline-flex; align-items: center; }
 .footer-legal .placeholder { text-decoration-color: #f9a8e3; }
 .linklike {
   background: none; border: 0; padding: 0; font: inherit; color: #fff; text-decoration: underline;
@@ -336,7 +339,8 @@ a:hover { color: var(--magenta-text); }
   padding: 8px var(--gutter) calc(8px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; justify-content: center;
 }
 .wa-bar .btn { width: 100%; min-height: 48px; }
-.wa-bar .wa-status { margin: 4px 0 0; justify-content: center; font-size: .75rem; line-height: 1.2; }
+.wa-bar .wa-status { margin: 6px 0 0; justify-content: center; text-align: center; font-size: .75rem; line-height: 1.25; }
+.wa-bar .wa-status .dot { width: 8px; height: 8px; }
 .wa-float { display: none; }
 
 /* ---------- Banner de cookies ---------- */
@@ -364,6 +368,7 @@ a:hover { color: var(--magenta-text); }
   :root { --gutter: 32px; }
   body { padding-bottom: 0; }
   .wa-bar { display: none; }
+  .proto-bar .more { display: inline; }
   .wa-float {
     display: inline-flex; position: fixed; right: 24px; bottom: 24px; z-index: 40;
     box-shadow: 0 8px 24px rgba(14, 122, 60, .35);
