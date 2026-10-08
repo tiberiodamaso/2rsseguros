@@ -1,0 +1,7 @@
+Plus Jakarta Sans
+Copyright 2020 The Plus Jakarta Sans Project Authors
+(https://github.com/tokotype/PlusJakartaSans)
+Licenciada sob SIL Open Font License 1.1 — https://openfontlicense.org
+
+Arquivos .woff2 (subset latin, pesos 400/600/800) obtidos de fonts.gstatic.com.
+A licenca permite auto-hospedagem e redistribuicao.
