@@ -24,6 +24,14 @@
     a.rel = 'noopener';
   }
 
+  // E-mail montado em tempo de execução: o HTML não contém "@", o que afasta robôs coletores.
+  var emails = document.querySelectorAll('a.js-email');
+  for (var m = 0; m < emails.length; m++) {
+    var addr = emails[m].getAttribute('data-u') + String.fromCharCode(64) + emails[m].getAttribute('data-d');
+    emails[m].href = 'mailto:' + addr;
+    emails[m].textContent = addr;
+  }
+
   var numbers = document.querySelectorAll('.js-wa-number');
   for (var n = 0; n < numbers.length; n++) numbers[n].textContent = C.whatsappDisplay;
 

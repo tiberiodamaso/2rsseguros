@@ -266,13 +266,21 @@ a:hover { color: var(--magenta-text); }
 }
 .ops-note { margin-top: 16px; font-size: .875rem; color: var(--ink-soft); }
 
-/* Depoimentos */
+/* Avaliações do Google */
 .review {
-  background: #fff; border: 1.5px dashed var(--navy-100); border-radius: var(--radius); padding: 24px;
-  min-height: 160px; display: flex; flex-direction: column; justify-content: center; text-align: center;
-  color: var(--ink-soft);
+  margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px;
+  display: flex; flex-direction: column; gap: 14px;
 }
-.review svg { width: 32px; height: 32px; margin: 0 auto 12px; color: var(--navy-100); }
+.review .stars { display: flex; gap: 2px; color: #e8a400; }
+.review .stars svg { width: 20px; height: 20px; }
+.review blockquote { margin: 0; flex: 1; }
+.review blockquote p { margin: 0; color: var(--ink); }
+.review-tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.review-tags li { font-size: .8125rem; font-weight: 600; color: var(--navy-700); background: var(--navy-50); border-radius: 999px; padding: 4px 10px; }
+.review figcaption { display: flex; flex-direction: column; font-size: .875rem; color: var(--ink-soft); border-top: 1px solid var(--line); padding-top: 12px; }
+.review figcaption strong { color: var(--ink); font-size: 1rem; }
+.reviews-link { margin-top: 24px; }
+.reviews-link a { font-weight: 600; }
 
 /* Quem somos */
 .partners { display: grid; gap: 24px; }

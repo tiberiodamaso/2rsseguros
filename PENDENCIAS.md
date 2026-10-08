@@ -6,16 +6,17 @@ Tudo que está provisório no site aparece com **sublinhado tracejado rosa** (cl
 
 - [ ] **Fotos da Rita e da Renata** — formato retrato 4:5 (ex.: 800×1000 px). Hoje: silhueta em SVG, marcada com `<!-- FOTO: Rita -->` e `<!-- FOTO: Renata -->`.
 - [ ] **Texto sobre cada sócia** — 2 ou 3 frases cada (trajetória, como atende). Hoje: rascunho genérico.
-- [ ] **Texto de apresentação da 2R's** ("Quem somos") — rascunho a revisar.
-- [ ] **Avaliações do Google Business Profile** — 3 avaliações reais (texto + primeiro nome, com autorização) ou definir um widget.
-- [ ] **Link "Ver avaliações no Google"** — URL do perfil no Google (hoje aponta para `#`).
-- [ ] **Logos das operadoras** — há espaço reservado em cada card. Confirmar também se a lista está completa e correta.
+- [ ] **Texto de apresentação da 2R'S** ("Quem somos") — rascunho a revisar.
+- [x] **Avaliações do Google** — 3 avaliações reais publicadas na íntegra, com primeiro nome e inicial do sobrenome.
+- [ ] **Confirmar o link "Ver todas as avaliações no Google"** — hoje aponta para `https://www.google.com/maps?cid=13234988083665049014`, montado com o número informado, mas não consegui confirmar que abre o perfil (o número pode ser o "ID do perfil" do painel, que é diferente do `cid` do Maps). O mais seguro: no Google, abrir o perfil → **Compartilhar** ou **Pedir avaliações** e colar aqui o link curto (`g.page/r/...`). Ele fica em `index.html` e nas duas landings (procure por `maps?cid=`).
+- [ ] **Logos das operadoras** — há espaço reservado em cada card. Pedir o kit oficial de marca de cada operadora (portal do corretor ou gerente comercial). Confirmar também se a lista está completa e correta.
 - [ ] **Revisão do FAQ** — respostas genéricas sobre carência, coparticipação, MEI, vidas, portabilidade, hospital, adesão, reajuste, doença preexistente e sênior. Conferir cada uma.
-- [ ] **E-mail no rodapé** — confirmar se `contato@2rsseguros.com.br` deve aparecer (e se a caixa é lida).
+- [x] **E-mail no rodapé** — `contato@2rsseguros.com.br` confirmado (montado por JS; o HTML não tem "@").
 - [ ] **Interior de SP** — quais cidades/regiões citar.
-- [ ] **Política de privacidade** — texto provisório; idealmente revisado por alguém de jurídico/LGPD. Definir o canal para pedidos de titulares (hoje: WhatsApp).
-- [ ] **Grafia do nome** — o site usa "2R's Seguros" (como no logo); confirmar.
-- [ ] **Número do WhatsApp** — confirmar que (11) 98341-4948 é o WhatsApp Business da Rita e que a mensagem automática fora do horário está ativa.
+- [x] **Política de privacidade** — texto padrão LGPD publicado (canal do titular: e-mail e WhatsApp). Recomendável uma revisão jurídica antes do lançamento.
+- [x] **Grafia do nome** — "2R'S Seguros". As mensagens pré-preenchidas do WhatsApp mantêm o texto do briefing ("site da 2RS").
+- [x] **Número do WhatsApp** — (11) 98341-4948 confirmado.
+- [ ] Confirmar que a mensagem automática fora do horário está ativa no WhatsApp Business.
 
 ## Técnico — antes de ir para produção
 

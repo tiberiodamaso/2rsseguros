@@ -1,6 +1,6 @@
-# 2R's Seguros — site
+# 2R'S Seguros — site
 
-Site estático (HTML + CSS + JS puros, sem build e sem dependências) da 2R's Seguros, corretora de plano de saúde. Objetivo: gerar conversas no WhatsApp.
+Site estático (HTML + CSS + JS puros, sem build e sem dependências) da 2R'S Seguros, corretora de plano de saúde. Objetivo: gerar conversas no WhatsApp.
 
 > Branch `prototipo` = protótipo em avaliação. O que precisa mudar antes de ir para produção está em [PENDENCIAS.md](PENDENCIAS.md).
 
@@ -78,7 +78,7 @@ O snippet do GTM está no `<head>` e no `<body>` das 4 páginas, precedido pelo 
 
 | Chave | Valores |
 |---|---|
-| `wa_location` | `cabecalho`, `hero`, `flutuante` (botão fixo, desktop), `barra-mobile` (barra fixa, celular), `rodape`, `cta-final`, ou o id da seção: `planos`, `para-quem`, `como-funciona`, `operadoras`, `por-que-2rs`, `quem-somos`, `duvidas` |
+| `wa_location` | `cabecalho`, `hero`, `flutuante` (botão fixo, desktop), `barra-mobile` (barra fixa, celular), `rodape`, `cta-final`, `politica` (texto da política de privacidade), ou o id da seção: `planos`, `para-quem`, `como-funciona`, `operadoras`, `por-que-2rs`, `quem-somos`, `duvidas` |
 | `wa_page` | `home`, `empresarial`, `individual-familiar`, `privacidade` |
 | `wa_product` | `saude-geral`, `saude-empresarial`, `saude-pf`, `viagem`, `auto`, `residencial` |
 
