@@ -1,4 +1,11 @@
 .git
+.wrangler
 .assetsignore
+.gitignore
+.nojekyll
+.DS_Store
 wrangler.jsonc
 CNAME
+CLAUDE.md
+MIGRAR-WORDPRESS-PARA-GITHUB-PAGES.txt
+refgraph.py

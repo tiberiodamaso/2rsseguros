@@ -2,3 +2,4 @@ CLAUDE.md
 MIGRAR-WORDPRESS-PARA-GITHUB-PAGES.txt
 refgraph.py
 .DS_Store
+.wrangler/
