@@ -317,7 +317,7 @@ a:hover { color: var(--magenta-text); }
 .site-footer h2 { font-size: 1rem; color: #fff; margin-bottom: 12px; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
 .site-footer li a, .site-footer .linklike { display: inline-flex; align-items: center; min-height: 44px; }
-.footer-brand img { width: 96px; height: 71px; background: #fff; border-radius: 12px; padding: 6px; }
+.footer-brand img { box-sizing: content-box; width: 96px; height: 71px; background: #fff; border-radius: 12px; padding: 6px; }
 .footer-brand p { margin-top: 12px; max-width: 28em; }
 .footer-legal {
   border-top: 1px solid rgba(199, 210, 234, .2); margin-top: 32px; padding-top: 20px;
