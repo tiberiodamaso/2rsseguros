@@ -198,6 +198,13 @@ a:hover { color: var(--magenta-text); }
 .art-blob.a { width: 260px; height: 260px; background: #e9defa; top: -40px; right: -60px; opacity: .6; }
 .art-blob.b { width: 180px; height: 180px; background: #fbd9f0; bottom: -40px; left: 0; opacity: .7; }
 
+/* Ilustração das landings (família / empresa) */
+.hero-illus .illus-svg { width: 100%; height: auto; border-radius: 28px; box-shadow: var(--shadow); }
+.illus-card { position: absolute; left: -24px; top: -20px; max-width: 280px; padding: 16px 18px; }
+.illus-title { margin: 0 0 10px; font-size: .875rem; font-weight: 800; color: var(--navy-900); }
+.illus-chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.illus-chips li { font-size: .8125rem; font-weight: 600; color: var(--navy-700); background: var(--navy-50); border-radius: 999px; padding: 4px 10px; }
+
 /* ---------- Seções ---------- */
 
 .section { padding: 56px 0; }

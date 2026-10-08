@@ -8,7 +8,7 @@ Tudo que está provisório no site aparece com **sublinhado tracejado rosa** (cl
 - [ ] **Texto sobre cada sócia** — 2 ou 3 frases cada (trajetória, como atende). Hoje: rascunho genérico.
 - [ ] **Texto de apresentação da 2R'S** ("Quem somos") — rascunho a revisar.
 - [x] **Avaliações do Google** — 3 avaliações reais publicadas na íntegra, com primeiro nome e inicial do sobrenome.
-- [ ] **Confirmar o link "Ver todas as avaliações no Google"** — hoje aponta para `https://www.google.com/maps?cid=13234988083665049014`, montado com o número informado, mas não consegui confirmar que abre o perfil (o número pode ser o "ID do perfil" do painel, que é diferente do `cid` do Maps). O mais seguro: no Google, abrir o perfil → **Compartilhar** ou **Pedir avaliações** e colar aqui o link curto (`g.page/r/...`). Ele fica em `index.html` e nas duas landings (procure por `maps?cid=`).
+- [x] **Link "Ver todas as avaliações no Google"** — `https://share.google/1SWVw5Mm33m8Inv43` (abre o perfil da 2R'S no Google).
 - [ ] **Logos das operadoras** — há espaço reservado em cada card. Pedir o kit oficial de marca de cada operadora (portal do corretor ou gerente comercial). Confirmar também se a lista está completa e correta.
 - [ ] **Revisão do FAQ** — respostas genéricas sobre carência, coparticipação, MEI, vidas, portabilidade, hospital, adesão, reajuste, doença preexistente e sênior. Conferir cada uma.
 - [x] **E-mail no rodapé** — `contato@2rsseguros.com.br` confirmado (montado por JS; o HTML não tem "@").
