@@ -1,6 +1,6 @@
 {
   // Precisa ser identico ao nome do Worker no painel do Cloudflare
-  "name": "2rsseguros",
+  "name": "2rsseguros-prototipo",
   "compatibility_date": "2026-10-01",
   "assets": { "directory": "./" }
 }
