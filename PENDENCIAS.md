@@ -9,7 +9,8 @@ Tudo que está provisório no site aparece com **sublinhado tracejado rosa** (cl
 - [ ] **Texto de apresentação da 2R'S** ("Quem somos") — rascunho a revisar.
 - [x] **Avaliações do Google** — 3 avaliações reais publicadas na íntegra, com primeiro nome e inicial do sobrenome.
 - [x] **Link "Ver todas as avaliações no Google"** — `https://share.google/1SWVw5Mm33m8Inv43` (abre o perfil da 2R'S no Google).
-- [ ] **Logos das operadoras** — há espaço reservado em cada card. Pedir o kit oficial de marca de cada operadora (portal do corretor ou gerente comercial). Confirmar também se a lista está completa e correta.
+- [x] **Logos das operadoras** — obtidos dos sites oficiais de cada operadora (`assets/img/operadoras/`). Ajustes feitos: Alice em versão monocromática escura (o original do site é branco); SulAmérica recortada da versão comemorativa "130 anos"; Bradesco usa o logo "bradesco seguros" do portal oficial (o domínio da Bradesco Saúde redireciona para ele). Se alguma operadora fornecer o kit oficial de marca, basta substituir o arquivo de mesmo nome.
+- [ ] Confirmar se a lista de operadoras está completa e correta.
 - [ ] **Revisão do FAQ** — respostas genéricas sobre carência, coparticipação, MEI, vidas, portabilidade, hospital, adesão, reajuste, doença preexistente e sênior. Conferir cada uma.
 - [x] **E-mail no rodapé** — `contato@2rsseguros.com.br` confirmado (montado por JS; o HTML não tem "@").
 - [ ] **Interior de SP** — quais cidades/regiões citar.
