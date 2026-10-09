@@ -12,10 +12,11 @@ Tudo que está provisório no site aparece com **sublinhado tracejado rosa** (cl
 - [x] **Logos das operadoras** — obtidos dos sites oficiais de cada operadora (`assets/img/operadoras/`). Ajustes feitos: Alice em versão monocromática escura (o original do site é branco); SulAmérica recortada da versão comemorativa "130 anos"; Bradesco usa o logo "bradesco seguros" do portal oficial (o domínio da Bradesco Saúde redireciona para ele). Se alguma operadora fornecer o kit oficial de marca, basta substituir o arquivo de mesmo nome.
 - [ ] Confirmar se a lista de operadoras está completa e correta.
 - [x] **Licença das ilustrações dos heros** (`assets/img/hero-empresa.webp` e `hero-familia.webp`) — imagens do Canva, com licença.
-- [ ] **Revisão do FAQ** — respostas genéricas sobre carência, coparticipação, MEI, vidas, portabilidade, hospital, adesão, reajuste, doença preexistente e sênior. Conferir cada uma.
+- [ ] **Revisão do FAQ** — já revisadas pelas sócias: MEI/plano PJ a partir de 1 vida, troca de plano e redução de carência (sempre analisada pela operadora; sem redução para parto, terapias e CPT) e coparticipação total/parcial. Faltam conferir as demais respostas genéricas sobre carência, coparticipação, MEI, vidas, portabilidade, hospital, adesão, reajuste, doença preexistente e sênior. Conferir cada uma.
 - [x] **E-mail no rodapé** — `contato@2rsseguros.com.br` confirmado (montado por JS; o HTML não tem "@").
 - [ ] **Interior de SP** — quais cidades/regiões citar.
 - [x] **Política de privacidade** — texto padrão LGPD publicado (canal do titular: e-mail e WhatsApp). Recomendável uma revisão jurídica antes do lançamento.
+- [ ] **Arquivo original do logo em círculo** — o site usa um recorte da imagem enviada (598 px, de uma captura de tela). Para máxima nitidez, enviar o arquivo original (SVG ou PNG ≥ 1000 px) e substituir `assets/img/logo-circulo.png`, `logo-circulo-144.webp` e `favicon.png`.
 - [x] **Grafia do nome** — "2R'S Seguros". As mensagens pré-preenchidas do WhatsApp mantêm o texto do briefing ("site da 2RS").
 - [x] **Número do WhatsApp** — (11) 98341-4948 confirmado.
 - [ ] Confirmar que a mensagem automática fora do horário está ativa no WhatsApp Business.

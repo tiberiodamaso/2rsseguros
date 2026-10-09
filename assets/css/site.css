@@ -117,7 +117,7 @@ a:hover { color: var(--magenta-text); }
 .site-header { background: #fff; border-bottom: 1px solid var(--line); }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; }
 .logo { display: block; flex: none; }
-.logo img { width: 88px; height: 65px; }
+.logo img { width: 64px; height: 64px; }
 .main-nav { display: none; }
 .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 24px; }
 .main-nav a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: .9375rem; }
@@ -311,6 +311,7 @@ a:hover { color: var(--magenta-text); }
 .faq details[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
 .faq .answer { padding: 0 20px 16px; color: var(--ink-soft); }
 .faq .answer p:last-child { margin-bottom: 0; }
+.faq .answer ul { margin: 0 0 1em; padding-left: 20px; }
 
 /* CTA final */
 .final-cta { background: var(--navy-900); color: #fff; padding: 56px 0; text-align: center; }
@@ -329,7 +330,7 @@ a:hover { color: var(--magenta-text); }
 .site-footer h2 { font-size: 1rem; color: #fff; margin-bottom: 12px; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
 .site-footer li a, .site-footer .linklike { display: inline-flex; align-items: center; min-height: 44px; }
-.footer-brand img { box-sizing: content-box; width: 96px; height: 71px; background: #fff; border-radius: 12px; padding: 6px; }
+.footer-brand img { width: 72px; height: 72px; }
 .footer-brand p { margin-top: 12px; max-width: 28em; }
 .footer-legal {
   border-top: 1px solid rgba(199, 210, 234, .2); margin-top: 32px; padding-top: 20px;
