@@ -14,7 +14,8 @@ Tudo que está provisório no site aparece com **sublinhado tracejado rosa** (cl
 - [x] **Licença das ilustrações dos heros** (`assets/img/hero-empresa.webp` e `hero-familia.webp`) — imagens do Canva, com licença.
 - [ ] **Revisão do FAQ** — já revisadas pelas sócias: MEI/plano PJ a partir de 1 vida, troca de plano e redução de carência (sempre analisada pela operadora; sem redução para parto, terapias e CPT) e coparticipação total/parcial. Faltam conferir as demais respostas genéricas sobre carência, coparticipação, MEI, vidas, portabilidade, hospital, adesão, reajuste, doença preexistente e sênior. Conferir cada uma.
 - [x] **E-mail no rodapé** — `contato@2rsseguros.com.br` confirmado (montado por JS; o HTML não tem "@").
-- [ ] **Interior de SP** — quais cidades/regiões citar.
+- [x] **Regiões de atendimento** — retiradas do site (nenhuma cidade ou região citada). As regiões servem só para a segmentação da campanha no Google Ads. A landing empresarial menciona atendimento em todo o Brasil (PME nacional).
+- [ ] **Plano individual: só SP?** — num áudio, as sócias disseram que o plano individual só é comercializado em São Paulo. O site não cita região (pedido do item 10); isso fica a cargo da segmentação geográfica da campanha individual/familiar. Se preferirem deixar explícito na landing individual (ex.: "no ABC e em São Paulo"), é uma troca rápida.
 - [x] **Política de privacidade** — texto padrão LGPD publicado (canal do titular: e-mail e WhatsApp). Recomendável uma revisão jurídica antes do lançamento.
 - [ ] **Arquivo original do logo em círculo** — o site usa um recorte da imagem enviada (598 px, de uma captura de tela). Para máxima nitidez, enviar o arquivo original (SVG ou PNG ≥ 1000 px) e substituir `assets/img/logo-circulo.png`, `logo-circulo-144.webp` e `favicon.png`.
 - [x] **Grafia do nome** — "2R'S Seguros". As mensagens pré-preenchidas do WhatsApp mantêm o texto do briefing ("site da 2RS").

@@ -331,7 +331,9 @@ a:hover { color: var(--magenta-text); }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
 .site-footer li a, .site-footer .linklike { display: inline-flex; align-items: center; min-height: 44px; }
 .footer-brand img { width: 72px; height: 72px; }
-.footer-brand p { margin-top: 12px; max-width: 28em; }
+.footer-brand { text-align: center; }
+.footer-brand img { margin: 0 auto; }
+.footer-brand p { margin: 12px 0 0; font-weight: 600; color: #fff; }
 .footer-legal {
   border-top: 1px solid rgba(199, 210, 234, .2); margin-top: 32px; padding-top: 20px;
   display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; font-size: .8125rem; color: #9fb0d6;
