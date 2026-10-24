@@ -56,7 +56,7 @@ Cada `git push` no branch `prototipo` publica em ~1 minuto. **Não** adicione `2
 Tudo em [`assets/js/config.js`](assets/js/config.js):
 
 - `whatsapp` / `whatsappDisplay` — número (só dígitos, com 55) e como aparece na tela;
-- `messages` — mensagem pré-preenchida por produto (`saude-geral`, `saude-empresarial`, `saude-pf`, `viagem`, `auto`, `residencial`);
+- `messages` — mensagem pré-preenchida por produto (`saude-geral`, `saude-empresarial`, `saude-pf`, `viagem`, `auto`, `residencial`, `consorcio`);
 - `hours` — horário por dia da semana (0 = domingo); dias ausentes = fechado. Feriados não são tratados;
 - `statusText` — textos do indicador "dentro / fora do horário".
 
@@ -80,7 +80,7 @@ O snippet do GTM está no `<head>` e no `<body>` das 4 páginas, precedido pelo 
 |---|---|
 | `wa_location` | `cabecalho`, `hero`, `flutuante` (botão fixo, desktop), `barra-mobile` (barra fixa, celular), `rodape`, `cta-final`, `politica` (texto da política de privacidade), ou o id da seção: `planos`, `para-quem`, `como-funciona`, `operadoras`, `por-que-2rs`, `quem-somos`, `duvidas` |
 | `wa_page` | `home`, `empresarial`, `individual-familiar`, `privacidade` |
-| `wa_product` | `saude-geral`, `saude-empresarial`, `saude-pf`, `viagem`, `auto`, `residencial` |
+| `wa_product` | `saude-geral`, `saude-empresarial`, `saude-pf`, `viagem`, `auto`, `residencial`, `consorcio` |
 
 Todo link de WhatsApp tem a classe `js-whatsapp` e os atributos `data-wa-location`, `data-wa-page` e `data-wa-product` — também dá para usar um gatilho de clique do GTM direto nesses atributos.
 

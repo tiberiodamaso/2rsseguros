@@ -18,7 +18,8 @@ window.SITE_CONFIG = {
     'saude-pf': 'Olá! Vim pelo site e quero uma cotação de plano de saúde individual/familiar.',
     'viagem': 'Olá! Vim pelo site e quero informações sobre seguro viagem',
     'auto': 'Olá! Vim pelo site e quero informações sobre seguro auto',
-    'residencial': 'Olá! Vim pelo site e quero informações sobre seguro residencial'
+    'residencial': 'Olá! Vim pelo site e quero informações sobre seguro residencial',
+    'consorcio': 'Olá! Vim pelo site e quero informações sobre consórcio Porto'
   },
 
   // Horário de atendimento no fuso de São Paulo.
