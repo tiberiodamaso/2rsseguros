@@ -2,10 +2,10 @@
 
 Tudo que está provisório no site aparece com **sublinhado tracejado rosa** (classe `.placeholder`) ou com **borda tracejada** (`.placeholder-box`).
 
-## Conteúdo — enviar ou revisar (sócias)
+## Conteúdo — enviar ou revisar (cliente)
 
-- [ ] **Fotos da Rita e da Renata** — formato retrato 4:5 (ex.: 800×1000 px). Hoje: silhueta em SVG, marcada com `<!-- FOTO: Rita -->` e `<!-- FOTO: Renata -->`.
-- [ ] **Seção "Quem somos"** — reestruturada com base em evoraseguros.com.br/quem-somos, em versão resumida: apresentação curta, fotos das sócias (só nome e "Sócia") e Missão, Visão e Valores. Todos os textos são rascunho a revisar (sublinhado tracejado).
+- [ ] **Seção "Quem somos"** — inspirada em evoraseguros.com.br/quem-somos, resumida e sem fotos ou menções às sócias (a empresa quer imagem institucional, de equipe). Textos de apresentação, Missão, Visão e Valores são rascunho a revisar (sublinhado tracejado).
+- [ ] **Avaliações do Google citam a Rita** — os 3 depoimentos reais mencionam a Rita pelo nome. Não foram alterados (editar o texto de uma avaliação real a falsearia). Decidir: manter como estão, ou trocar por outras avaliações do perfil que não citem nomes.
 - [x] **Avaliações do Google** — 3 avaliações reais publicadas na íntegra, com primeiro nome e inicial do sobrenome.
 - [x] **Link "Ver todas as avaliações no Google"** — `https://share.google/1SWVw5Mm33m8Inv43` (abre o perfil da 2R'S no Google).
 - [x] **Logos das operadoras** — obtidos dos sites oficiais de cada operadora (`assets/img/operadoras/`). Ajustes feitos: Alice em versão monocromática escura (o original do site é branco); SulAmérica recortada da versão comemorativa "130 anos"; Bradesco usa o logo "bradesco seguros" do portal oficial (o domínio da Bradesco Saúde redireciona para ele). Se alguma operadora fornecer o kit oficial de marca, basta substituir o arquivo de mesmo nome.

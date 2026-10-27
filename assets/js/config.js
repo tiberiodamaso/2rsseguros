@@ -7,7 +7,7 @@
  * (procure por "wa.me/" — ver README).
  */
 window.SITE_CONFIG = {
-  // Número no formato internacional, só dígitos (WhatsApp Business da Rita)
+  // Número no formato internacional, só dígitos (WhatsApp Business da 2R'S)
   whatsapp: '5511983414948',
   whatsappDisplay: '(11) 98341-4948',
 
