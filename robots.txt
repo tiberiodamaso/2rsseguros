@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /*.md$
 
 Sitemap: https://2rsseguros.com.br/sitemap.xml

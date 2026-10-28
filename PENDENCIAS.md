@@ -1,34 +1,29 @@
-# Pendências do protótipo
+# Pendências
 
-Tudo que está provisório no site aparece com **sublinhado tracejado rosa** (classe `.placeholder`) ou com **borda tracejada** (`.placeholder-box`).
+Site aprovado pelo cliente e publicado em produção (https://2rsseguros.com.br) em 2026-10-28.
 
-## Conteúdo — enviar ou revisar (cliente)
+## Técnico — fazer logo após o lançamento
 
-- [ ] **Seção "Quem somos"** — inspirada em evoraseguros.com.br/quem-somos, resumida e sem fotos ou menções às sócias (a empresa quer imagem institucional, de equipe). Textos de apresentação, Missão, Visão e Valores são rascunho a revisar (sublinhado tracejado).
-- [ ] **Avaliações do Google citam a Rita** — os 3 depoimentos reais mencionam a Rita pelo nome. Não foram alterados (editar o texto de uma avaliação real a falsearia). Decidir: manter como estão, ou trocar por outras avaliações do perfil que não citem nomes.
-- [x] **Avaliações do Google** — 3 avaliações reais publicadas na íntegra, com primeiro nome e inicial do sobrenome.
-- [x] **Link "Ver todas as avaliações no Google"** — `https://share.google/1SWVw5Mm33m8Inv43` (abre o perfil da 2R'S no Google).
-- [x] **Logos das operadoras** — obtidos dos sites oficiais de cada operadora (`assets/img/operadoras/`). Ajustes feitos: Alice em versão monocromática escura (o original do site é branco); SulAmérica recortada da versão comemorativa "130 anos"; Bradesco usa o logo "bradesco seguros" do portal oficial (o domínio da Bradesco Saúde redireciona para ele). Se alguma operadora fornecer o kit oficial de marca, basta substituir o arquivo de mesmo nome.
-- [ ] Confirmar se a lista de operadoras está completa e correta.
-- [x] **Licença das ilustrações dos heros** (`assets/img/hero-empresa.webp` e `hero-familia.webp`) — imagens do Canva, com licença.
-- [ ] **Revisão do FAQ** — já revisadas pelas sócias: MEI/plano PJ a partir de 1 vida, troca de plano e redução de carência (sempre analisada pela operadora; sem redução para parto, terapias e CPT) e coparticipação total/parcial. Faltam conferir as demais respostas genéricas sobre carência, coparticipação, MEI, vidas, portabilidade, hospital, adesão, reajuste, doença preexistente e sênior. Conferir cada uma.
-- [x] **E-mail no rodapé** — `contato@2rsseguros.com.br` confirmado (montado por JS; o HTML não tem "@").
-- [x] **Regiões de atendimento** — retiradas do site (nenhuma cidade ou região citada). As regiões servem só para a segmentação da campanha no Google Ads. A landing empresarial menciona atendimento em todo o Brasil (PME nacional).
-- [ ] **Plano individual: só SP?** — num áudio, as sócias disseram que o plano individual só é comercializado em São Paulo. O site não cita região (pedido do item 10); isso fica a cargo da segmentação geográfica da campanha individual/familiar. Se preferirem deixar explícito na landing individual (ex.: "no ABC e em São Paulo"), é uma troca rápida.
-- [x] **Política de privacidade** — texto padrão LGPD publicado (canal do titular: e-mail e WhatsApp). Recomendável uma revisão jurídica antes do lançamento.
-- [ ] **Arquivo original do logo em círculo** — o site usa um recorte da imagem enviada (598 px, de uma captura de tela). Para máxima nitidez, enviar o arquivo original (SVG ou PNG ≥ 1000 px) e substituir `assets/img/logo-circulo.png`, `logo-circulo-144.webp` e `favicon.png`.
-- [x] **Grafia do nome** — "2R'S Seguros". As mensagens pré-preenchidas do WhatsApp mantêm o texto do briefing ("site da 2RS").
-- [x] **Número do WhatsApp** — (11) 98341-4948 confirmado.
-- [ ] Confirmar que a mensagem automática fora do horário está ativa no WhatsApp Business.
-
-## Técnico — antes de ir para produção
-
-- [ ] **Remover o `<meta name="robots" content="noindex, nofollow">`** das 4 páginas (há um comentário `PROTÓTIPO` logo acima de cada um).
-- [ ] **Remover o bloco `X-Robots-Tag` do `_headers`** (ou o arquivo inteiro, se a produção continuar no GitHub Pages, que não lê `_headers`).
-- [ ] Remover a **faixa "Protótipo para avaliação"** do topo das 4 páginas.
-- [ ] Ao fazer o merge de `prototipo` no `main`: apagar `wrangler.jsonc` e `.assetsignore` se a produção continuar no GitHub Pages; manter o arquivo `CNAME`.
-- [ ] Atualizar o `<lastmod>` do `sitemap.xml` e enviar o sitemap no Google Search Console.
+- [ ] Enviar `https://2rsseguros.com.br/sitemap.xml` no Google Search Console.
 - [ ] No GTM, filtrar as tags de GA4 e Google Ads por hostname `2rsseguros.com.br` (ver README) e criar a conversão de `whatsapp_click`.
 - [ ] Se adicionar ferramentas além de Google (Meta Pixel, widget de avaliações etc.), incluir os domínios na CSP das 4 páginas.
 - [ ] Opcional: imagem própria para compartilhamento (Open Graph 1200×630) — hoje usa o logo.
 - [ ] Opcional: feriados no indicador de horário (hoje só dias da semana).
+
+## Conteúdo — pendente com o cliente
+
+- [ ] Confirmar se a lista de operadoras está completa e correta.
+- [ ] **Arquivo original do logo em círculo** — o site usa um recorte da imagem enviada (598 px, de uma captura de tela). Para máxima nitidez, enviar o arquivo original (SVG ou PNG ≥ 1000 px) e substituir `assets/img/logo-circulo.png`, `logo-circulo-144.webp` e `favicon.png`.
+- [ ] Confirmar que a mensagem automática fora do horário está ativa no WhatsApp Business.
+- [ ] Recomendável: revisão jurídica da política de privacidade (texto padrão LGPD; canal do titular: e-mail e WhatsApp).
+
+## Decisões registradas
+
+- **Imagem institucional** — o site fala como empresa/equipe: sem fotos, nomes ou menções às sócias, sem "atendimento online" e sem cidades ou regiões (as regiões servem só para a segmentação no Google Ads; a landing empresarial diz "todo o Brasil").
+- **Plano individual** — só é comercializado em SP, mas o site não cita região; isso fica na segmentação geográfica da campanha individual/familiar.
+- **Avaliações do Google** — 3 avaliações reais publicadas na íntegra (primeiro nome e inicial do sobrenome), com link para o perfil (`https://share.google/1SWVw5Mm33m8Inv43`). Elas citam a Rita pelo nome e foram mantidas como estão — editar uma avaliação real a falsearia. Se o cliente preferir, trocar por outras do perfil que não citem nomes.
+- **Textos** — Quem somos, Missão/Visão/Valores e FAQ aprovados no lançamento.
+- **Logos das operadoras** — obtidos dos sites oficiais (`assets/img/operadoras/`). Alice em versão monocromática escura (o original é branco); SulAmérica recortada da versão "130 anos"; Bradesco usa o logo "bradesco seguros" do portal oficial. Se alguma operadora fornecer o kit de marca, basta substituir o arquivo de mesmo nome.
+- **Ilustrações dos heros** (`hero-empresa.webp`, `hero-familia.webp`) — imagens do Canva, com licença.
+- **Contato** — WhatsApp (11) 98341-4948; e-mail `contato@2rsseguros.com.br` (montado por JS; o HTML não tem "@"). Grafia "2R'S Seguros"; as mensagens pré-preenchidas do WhatsApp mantêm "site da 2RS".
+- **Arquivos do Cloudflare** (`_headers`, `wrangler.jsonc`, `.assetsignore`) ficam no repositório nos dois branches: só a pré-visualização os usa, o GitHub Pages os ignora. Manter o `CNAME`.

@@ -1,4 +1,6 @@
-# PROTÓTIPO: remover o bloco X-Robots-Tag antes de ir para produção (ver PENDENCIAS.md)
+# Só o Cloudflare (pré-visualização) lê este arquivo; o GitHub Pages (produção) o ignora.
+# O noindex abaixo mantém a cópia do workers.dev fora do Google. Não use este arquivo
+# num deploy de produção no Cloudflare sem antes tirar o bloco X-Robots-Tag.
 /*
   X-Robots-Tag: noindex, nofollow
 

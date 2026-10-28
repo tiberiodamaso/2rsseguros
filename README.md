@@ -2,7 +2,7 @@
 
 Site estático (HTML + CSS + JS puros, sem build e sem dependências) da 2R'S Seguros, corretora de plano de saúde. Objetivo: gerar conversas no WhatsApp.
 
-> Branch `prototipo` = protótipo em avaliação. O que precisa mudar antes de ir para produção está em [PENDENCIAS.md](PENDENCIAS.md).
+> Produção: https://2rsseguros.com.br (branch `main`, GitHub Pages). Pré-visualização: https://2rsseguros-prototipo.weebby.workers.dev (branch `prototipo`, Cloudflare). Ver [Publicação](#publicação). Itens em aberto: [PENDENCIAS.md](PENDENCIAS.md).
 
 ## Páginas
 
@@ -20,9 +20,10 @@ assets/js/config.js        número, mensagens e horário do WhatsApp
 assets/js/site.js          links de WhatsApp, dataLayer, indicador de horário, banner de cookies
 assets/fonts/              Plus Jakarta Sans (400/600/800), auto-hospedada
 assets/img/                logo (PNG para Open Graph, WebP no site)
-_headers                   cabeçalhos do Cloudflare (noindex do protótipo, cache)
-wrangler.jsonc             configuração do Worker do Cloudflare
-.assetsignore              arquivos que NÃO são publicados (README, PENDENCIAS, configs)
+_headers                   só Cloudflare: noindex da pré-visualização + cache (o GitHub Pages ignora)
+wrangler.jsonc             só Cloudflare: configuração do Worker
+.assetsignore              só Cloudflare: arquivos que o Worker não publica (README, PENDENCIAS, configs)
+CNAME                      domínio do GitHub Pages — não apagar
 ```
 
 ## Rodar localmente
@@ -34,22 +35,33 @@ python3 -m http.server 8000      # na raiz do repositório
 
 Os caminhos são absolutos (`/assets/...`), então o site precisa ser servido **na raiz** de um domínio — abrir o `index.html` direto do disco ou servir em subpasta quebra CSS e links.
 
-## Deploy no Cloudflare
+## Publicação
 
-O protótipo roda num **Worker** com static assets (não no Cloudflare Pages):
+Os dois branches têm **o mesmo código**; o que muda é onde cada um é publicado:
 
-| Campo | Valor |
-|---|---|
-| Worker | `2rsseguros-prototipo` → https://2rsseguros-prototipo.weebby.workers.dev/ |
-| Branch control (produção do Worker) | `prototipo` |
-| Build command | *(vazio)* — não há build |
-| Deploy command | `npx wrangler deploy` |
-| Root directory | `/` |
-| Diretório publicado | a raiz do repo (`"assets": { "directory": "./" }` no `wrangler.jsonc`), menos o que está no `.assetsignore` |
+| | Produção | Pré-visualização |
+|---|---|---|
+| Branch | `main` | `prototipo` |
+| Onde | GitHub Pages | Cloudflare Worker `2rsseguros-prototipo` |
+| URL | https://2rsseguros.com.br | https://2rsseguros-prototipo.weebby.workers.dev |
+| Google | indexa (sitemap + robots) | **não** indexa: o `_headers` manda `X-Robots-Tag: noindex` |
 
-Se um dia migrar para Cloudflare Pages: build command vazio e diretório de saída `/`.
+Fluxo para uma mudança:
 
-Cada `git push` no branch `prototipo` publica em ~1 minuto. **Não** adicione `2rsseguros.com.br` como domínio do Worker — o site oficial está no GitHub Pages (branch `main`).
+```bash
+git checkout prototipo        # editar, commitar
+git push                      # Cloudflare publica em ~1 min → mostrar ao cliente
+git checkout main             # depois da aprovação
+git merge --ff-only prototipo
+git push                      # GitHub Pages publica em ~1 min
+git checkout prototipo
+```
+
+Não commite direto no `main`: o `--ff-only` exige que o `main` nunca fique à frente do `prototipo`.
+
+Configuração do Worker no Cloudflare: branch de produção `prototipo`, build command vazio, deploy command `npx wrangler deploy`, root directory `/`; publica a raiz do repo (`"assets": { "directory": "./" }`) menos o que está no `.assetsignore`. **Não** adicione `2rsseguros.com.br` como domínio do Worker — e, se um dia a produção for para o Cloudflare, tire antes o bloco `X-Robots-Tag` do `_headers`.
+
+No GitHub Pages, o `.nojekyll` faz os arquivos irem como estão; README e PENDENCIAS ficam acessíveis no domínio, mas o `robots.txt` bloqueia `*.md` para buscadores.
 
 ## Editar número, mensagens e horário
 
@@ -97,7 +109,7 @@ Junto, o site chama `gtag('consent', 'update', {...})` com `ad_storage`, `ad_use
 1. Variáveis da camada de dados: `wa_location`, `wa_page`, `wa_product`.
 2. Acionador: Evento personalizado `whatsapp_click`.
 3. Tags: evento GA4 (ex.: `whatsapp_click` ou `generate_lead`, com os três parâmetros) e conversão do Google Ads com o mesmo acionador.
-4. **Filtre por hostname** (`Page Hostname` igual a `2rsseguros.com.br`) nas tags de GA4 e Ads — senão as visitas ao protótipo (`*.workers.dev`) e ao `localhost` entram nas métricas reais.
+4. **Filtre por hostname** (`Page Hostname` igual a `2rsseguros.com.br`) nas tags de GA4 e Ads — senão as visitas à pré-visualização (`*.workers.dev`) e ao `localhost` entram nas métricas reais.
 5. Nas configurações de consentimento das tags, use as verificações nativas do Consent Mode (Google Ads e GA4 já respeitam `ad_storage` / `analytics_storage`).
 
 ### CSP
